@@ -1,5 +1,6 @@
 # frp
 ##### 群辉内网穿透
+##### frp版本0.29.0(synology 718+测试通过)
 ##### 可以直接下载镜像: `docker pull hackshen/frp`
 ##### 镜像里面包含了frpc和frps默认运行 `./frpc -c /frp/frpc.ini`
 ##### 网络使用host只支持linux
