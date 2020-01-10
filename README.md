@@ -10,6 +10,6 @@
 docker run -d --name frp_c --network host -v <local frpc.ini path>:/frp/frpc.ini hackshen/frp 
 
 # 服务端运行
-docker run -itd --name frp_s --network host -v <local frps.ini path>:/frp/frps.ini hackshen/frp /bin/sh -c './frps -c frps.ini'
+docker run -d --name frp_s --network host -v <local frps.ini path>:/frp/frps.ini hackshen/frp /bin/sh -c './frps -c frps.ini'
 ```
 
