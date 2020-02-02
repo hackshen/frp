@@ -7,9 +7,16 @@
 ##### [The host networking driver only works on Linux hosts, and is not supported on Docker Desktop for Mac, Docker Desktop for Windows, or Docker EE for Windows Server.](https://docs.docker.com/network/host/)
 ```bash
 # 客户端运行
-docker run -d --name frp_c --network host -v <local frpc.ini path>:/frp/frpc.ini hackshen/frp 
+docker run \
+    --name frp_c \
+    --network host \
+    -v $PWD/frpc.ini:/frp/frpc.ini \
+    -d hackshen/frp 
 
 # 服务端运行
-docker run -d --name frp_s --network host -v <local frps.ini path>:/frp/frps.ini hackshen/frp /bin/sh -c './frps -c frps.ini'
-```
+docker run \
+    --name frp_s --network host \
+    -v $PWD/frpc.ini:/frp/frps.ini \
+    -d hackshen/frp /bin/sh -c './frps -c frps.ini'
+  ```
 
