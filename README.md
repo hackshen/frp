@@ -17,7 +17,7 @@ docker run \
 docker run \
     --name frp_s \
     --network host \
-    -v $PWD/frpc.ini:/frp/frps.ini \
+    -v $PWD/frps.ini:/frp/frps.ini \
     -d hackshen/frp /bin/sh -c './frps -c frps.ini'
   ```
 
